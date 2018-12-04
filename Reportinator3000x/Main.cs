@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Reportinator3000x
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
@@ -30,6 +30,11 @@ namespace Reportinator3000x
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thanks!");
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
