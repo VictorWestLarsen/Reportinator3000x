@@ -153,6 +153,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PageWindow";
             this.Text = "PageWindow";
+            this.Load += new System.EventHandler(this.PageWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
