@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Reportinator3000x
 {
-    public partial class PageWindow : Form
+    public partial class ModulesWindow : Form
     {
-        public PageWindow()
+        public ModulesWindow()
         {
             InitializeComponent();
         }
 
-        private void PageWindow_Load(object sender, EventArgs e)
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
