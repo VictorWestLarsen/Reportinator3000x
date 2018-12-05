@@ -54,7 +54,7 @@ namespace Reportinator3000x
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(484, 422);
+            this.button1.Location = new System.Drawing.Point(484, 441);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 30);
             this.button1.TabIndex = 2;
@@ -63,7 +63,7 @@ namespace Reportinator3000x
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(609, 422);
+            this.button2.Location = new System.Drawing.Point(609, 441);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 30);
             this.button2.TabIndex = 3;
@@ -72,7 +72,7 @@ namespace Reportinator3000x
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(733, 422);
+            this.button3.Location = new System.Drawing.Point(733, 441);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 30);
             this.button3.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace Reportinator3000x
             this.Interval});
             this.listView1.Location = new System.Drawing.Point(18, 53);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(823, 352);
+            this.listView1.Size = new System.Drawing.Size(823, 370);
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
