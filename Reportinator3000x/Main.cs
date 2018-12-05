@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Reportinator3000x
 {
-    public partial class Main : Form
+    public partial class MainWindow : Form
     {
-        public Main()
+        public MainWindow()
         {
             InitializeComponent();
         }
@@ -33,11 +33,6 @@ namespace Reportinator3000x
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
