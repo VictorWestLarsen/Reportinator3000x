@@ -52,8 +52,7 @@ namespace Reportinator3000x
         {
 
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void CreateReportBtnClick(object sender, EventArgs e)
         {
             Report report = new Report(control);
             report.Show();

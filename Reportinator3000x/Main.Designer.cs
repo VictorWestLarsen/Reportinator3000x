@@ -33,10 +33,10 @@ namespace Reportinator3000x
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.ReportList = new System.Windows.Forms.ListView();
+            this.nameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Customer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Interval = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.RefreshBtn = new System.Windows.Forms.Button();
-            this.nameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +60,7 @@ namespace Reportinator3000x
             this.button1.TabIndex = 2;
             this.button1.Text = "Create";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.CreateReportBtnClick);
             // 
             // button2
             // 
@@ -98,16 +98,19 @@ namespace Reportinator3000x
             this.ReportList.View = System.Windows.Forms.View.Details;
             this.ReportList.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
+            // nameColumn
+            // 
+            this.nameColumn.Text = "Name";
+            this.nameColumn.Width = 236;
+            // 
             // Customer
             // 
-            this.Customer.DisplayIndex = 0;
             this.Customer.Tag = "Customer";
             this.Customer.Text = "Customer";
             this.Customer.Width = 321;
             // 
             // Interval
             // 
-            this.Interval.DisplayIndex = 1;
             this.Interval.Tag = "Interval";
             this.Interval.Text = "Interval";
             this.Interval.Width = 57;
@@ -121,11 +124,6 @@ namespace Reportinator3000x
             this.RefreshBtn.Text = "Refresh";
             this.RefreshBtn.UseVisualStyleBackColor = true;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
-            // 
-            // nameColumn
-            // 
-            this.nameColumn.Text = "Name";
-            this.nameColumn.Width = 236;
             // 
             // MainWindow2
             // 
