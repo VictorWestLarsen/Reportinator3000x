@@ -59,5 +59,20 @@ namespace Reportinator3000x
             return null;
         }
 
+        public List<Dictionary<string, string>> GetReportsOverview()
+        {
+            List<Dictionary<string, string>> reportItems = new List<Dictionary<string, string>>();
+
+            foreach(ReportLib.Report report in reports) {
+                Dictionary<string, string> context = new Dictionary<string, string>();
+                context["name"] = report.ReportName;
+                context["customer"] = report.Customer;
+                context["interval"] = report.Interval.ToString();
+                reportItems.Add(context);
+            }
+
+            return reportItems;
+        }
+
     }
 }
