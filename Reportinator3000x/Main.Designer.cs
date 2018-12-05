@@ -54,7 +54,7 @@ namespace Reportinator3000x
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 422);
+            this.button1.Location = new System.Drawing.Point(484, 422);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 30);
             this.button1.TabIndex = 2;
@@ -63,7 +63,7 @@ namespace Reportinator3000x
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(149, 422);
+            this.button2.Location = new System.Drawing.Point(609, 422);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 30);
             this.button2.TabIndex = 3;
@@ -72,16 +72,17 @@ namespace Reportinator3000x
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(281, 422);
+            this.button3.Location = new System.Drawing.Point(733, 422);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 30);
             this.button3.TabIndex = 4;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // reportBindingSource
             // 
-            this.reportBindingSource.DataSource = typeof(ReportLib.Report);
+            this.reportBindingSource.DataSource = typeof(void);
             // 
             // listView1
             // 
@@ -89,15 +90,17 @@ namespace Reportinator3000x
             this.Name,
             this.Customer,
             this.Interval});
-            this.listView1.Location = new System.Drawing.Point(18, 55);
+            this.listView1.Location = new System.Drawing.Point(18, 53);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(633, 314);
+            this.listView1.Size = new System.Drawing.Size(823, 352);
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Name
             // 
+            this.Name.Name = "MainWindow";
             this.Name.Tag = "Name";
             this.Name.Text = "Name";
             this.Name.Width = 251;
@@ -118,7 +121,7 @@ namespace Reportinator3000x
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 478);
+            this.ClientSize = new System.Drawing.Size(853, 493);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
