@@ -34,6 +34,7 @@ namespace Reportinator3000x
             Control.CreateReport(NameInput.Text);
             int interval = int.Parse(IntervalInput.Text);
             Control.SetGlobalParameter(CustomerInput.Text, EmailInput.Text, interval, NameInput.Text);
+            MessageBox.Show("Report created, refresh the main window please");
         }
 
         private void button4_Click(object sender, EventArgs e)

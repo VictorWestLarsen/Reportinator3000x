@@ -96,36 +96,36 @@
             // CustomerInput
             // 
             this.CustomerInput.Location = new System.Drawing.Point(114, 9);
-            this.CustomerInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CustomerInput.Margin = new System.Windows.Forms.Padding(2);
             this.CustomerInput.Name = "CustomerInput";
             this.CustomerInput.Size = new System.Drawing.Size(133, 20);
-            this.CustomerInput.TabIndex = 4;
+            this.CustomerInput.TabIndex = 1;
             this.CustomerInput.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // NameInput
             // 
             this.NameInput.Location = new System.Drawing.Point(114, 98);
-            this.NameInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NameInput.Margin = new System.Windows.Forms.Padding(2);
             this.NameInput.Name = "NameInput";
             this.NameInput.Size = new System.Drawing.Size(133, 20);
-            this.NameInput.TabIndex = 5;
+            this.NameInput.TabIndex = 4;
             // 
             // IntervalInput
             // 
             this.IntervalInput.ForeColor = System.Drawing.SystemColors.GrayText;
             this.IntervalInput.Location = new System.Drawing.Point(114, 67);
-            this.IntervalInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IntervalInput.Margin = new System.Windows.Forms.Padding(2);
             this.IntervalInput.Name = "IntervalInput";
             this.IntervalInput.Size = new System.Drawing.Size(133, 20);
-            this.IntervalInput.TabIndex = 6;
+            this.IntervalInput.TabIndex = 3;
             // 
             // EmailInput
             // 
             this.EmailInput.Location = new System.Drawing.Point(114, 36);
-            this.EmailInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmailInput.Margin = new System.Windows.Forms.Padding(2);
             this.EmailInput.Name = "EmailInput";
             this.EmailInput.Size = new System.Drawing.Size(133, 20);
-            this.EmailInput.TabIndex = 7;
+            this.EmailInput.TabIndex = 2;
             // 
             // checkedListBox1
             // 
@@ -237,7 +237,7 @@
             "Westfield",
             "Wiesmann"});
             this.checkedListBox1.Location = new System.Drawing.Point(114, 131);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(133, 199);
             this.checkedListBox1.TabIndex = 8;
@@ -270,7 +270,7 @@
             this.Page,
             this.PageNr});
             this.listView1.Location = new System.Drawing.Point(268, 131);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(296, 211);
             this.listView1.TabIndex = 11;
@@ -292,7 +292,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(578, 131);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 12;
@@ -303,7 +303,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(578, 154);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 13;
@@ -314,7 +314,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(578, 178);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 19);
             this.button3.TabIndex = 14;
@@ -325,7 +325,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(66, 372);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 19);
             this.button4.TabIndex = 15;
@@ -337,7 +337,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(5, 372);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(56, 19);
             this.button5.TabIndex = 16;
@@ -368,7 +368,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Report";
             this.Text = "Report";
             this.ResumeLayout(false);
