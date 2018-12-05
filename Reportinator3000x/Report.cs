@@ -36,7 +36,7 @@ namespace Reportinator3000x
             {
                 interval = int.Parse(IntervalInput.Text);
             }
-            catch (FormatException f)
+            catch (FormatException)
             {
                 MessageBox.Show("That is not a number, please only enter numbers!");
                 return;
