@@ -58,5 +58,15 @@ namespace Reportinator3000x
             Report report = new Report(control);
             report.Show();
         }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            List<Dictionary<string, string>> data = control.GetReportsOverview();
+            ReportList.Items.Clear();
+            foreach(Dictionary<string, string> context in data) {
+                ListViewItem row = new ListViewItem(new[] { context["name"], context["customer"], context["interval"] });
+                ReportList.Items.Add(row);
+            }
+        }
     }
 }
