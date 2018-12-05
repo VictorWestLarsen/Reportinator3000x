@@ -31,8 +31,18 @@ namespace Reportinator3000x
 
         private void CreateReportBtnClick(object sender, EventArgs e)
         {
+            int interval = 0;
+            try
+            {
+                interval = int.Parse(IntervalInput.Text);
+            }
+            catch (FormatException f)
+            {
+                MessageBox.Show("That is not a number, please only enter numbers!");
+                return;
+            }
+
             Control.CreateReport(NameInput.Text);
-            int interval = int.Parse(IntervalInput.Text);
             Control.SetGlobalParameter(CustomerInput.Text, EmailInput.Text, interval, NameInput.Text);
             MessageBox.Show("Report created, refresh the main window please");
         }
