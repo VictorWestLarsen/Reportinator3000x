@@ -344,7 +344,7 @@
             this.button5.Tag = "ReportCreate";
             this.button5.Text = "Create";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            this.button5.Click += new System.EventHandler(this.CreateReportBtnClick);
             // 
             // Report
             // 
