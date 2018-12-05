@@ -42,19 +42,20 @@ namespace Reportinator3000x
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 31);
+            this.label1.Size = new System.Drawing.Size(88, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reports";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(484, 422);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(363, 343);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 30);
+            this.button1.Size = new System.Drawing.Size(81, 24);
             this.button1.TabIndex = 2;
             this.button1.Text = "Create";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,22 +63,22 @@ namespace Reportinator3000x
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(609, 422);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(457, 343);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 30);
+            this.button2.Size = new System.Drawing.Size(81, 24);
             this.button2.TabIndex = 3;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(733, 422);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(550, 343);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 30);
+            this.button3.Size = new System.Drawing.Size(81, 24);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Remove";
+            this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -87,10 +88,10 @@ namespace Reportinator3000x
             this.MainWindow,
             this.Customer,
             this.Interval});
-            this.listView1.Location = new System.Drawing.Point(19, 53);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listView1.Location = new System.Drawing.Point(14, 43);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(823, 352);
+            this.listView1.Size = new System.Drawing.Size(618, 287);
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -117,16 +118,16 @@ namespace Reportinator3000x
             // 
             // MainWindow2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 494);
+            this.ClientSize = new System.Drawing.Size(640, 401);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name.Name = "MainWindow2";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "MainWindow2";
             this.Text = "Reportinator 3000x";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);

@@ -12,9 +12,11 @@ namespace Reportinator3000x
 {
     public partial class Report : Form
     {
-        public Report()
+        private Controller Control;
+        public Report(Controller control)
         {
             InitializeComponent();
+            Control = control;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -23,6 +25,18 @@ namespace Reportinator3000x
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Control.CreateReport(NameInput.Text);
+            int interval = int.Parse(IntervalInput.Text);
+            Control.SetGlobalParameter(CustomerInput.Text, EmailInput.Text, interval, NameInput.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
