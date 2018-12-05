@@ -145,6 +145,7 @@
             this.Controls.Add(this.ReportNamePage);
             this.Name = "PageWindow";
             this.Text = "PageWindow";
+            this.Load += new System.EventHandler(this.PageWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
