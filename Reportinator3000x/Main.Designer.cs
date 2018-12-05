@@ -125,7 +125,7 @@ namespace Reportinator3000x
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "MainWindow";
+            this.Name.Name = "MainWindow";
             this.Text = "Reportinator 3000x";
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).EndInit();
