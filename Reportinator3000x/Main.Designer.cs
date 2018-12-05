@@ -1,6 +1,6 @@
 namespace Reportinator3000x
 {
-    partial class Main
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -114,7 +114,7 @@ namespace Reportinator3000x
             this.Interval.Text = "Interval";
             this.Interval.Width = 57;
             // 
-            // Main
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,8 +125,9 @@ namespace Reportinator3000x
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Main";
+            this.Name = "MainWindow";
             this.Text = "Reportinator 3000x";
+            this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
