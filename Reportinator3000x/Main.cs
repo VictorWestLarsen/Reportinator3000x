@@ -15,6 +15,7 @@ namespace Reportinator3000x
 {
     public partial class MainWindow2 : Form
     {
+        Controller control = new Controller();
         public MainWindow2()
         {
             InitializeComponent();
@@ -54,7 +55,7 @@ namespace Reportinator3000x
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Report report = new Report();
+            Report report = new Report(control);
             report.Show();
         }
     }

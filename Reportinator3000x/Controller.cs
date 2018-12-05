@@ -7,7 +7,7 @@ using ReportLib;
 
 namespace Reportinator3000x
 {
-    class Controller
+    public class Controller
     {
         private List<ReportLib.Report> reports = new List<ReportLib.Report>();
 
@@ -47,6 +47,16 @@ namespace Reportinator3000x
 
             report.ChooseModules(PageNr, moduleName, serialNumber);
 
+        }
+
+        public ReportLib.Report GetReport(string reportName)
+        {
+            foreach(ReportLib.Report report in reports) {
+                if (report.ReportName.Equals(reportName)) {
+                    return report;
+                }
+            }
+            return null;
         }
 
     }
