@@ -33,7 +33,7 @@ namespace Reportinator3000x
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MainWindow = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Customer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Interval = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
@@ -85,7 +85,7 @@ namespace Reportinator3000x
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Name,
+            this.MainWindow,
             this.Customer,
             this.Interval});
             this.listView1.Location = new System.Drawing.Point(14, 43);
@@ -97,12 +97,12 @@ namespace Reportinator3000x
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // Name
+            // MainWindow
             // 
-            this.Name.Name = "MainWindow";
-            this.Name.Tag = "Name";
-            this.Name.Text = "Name";
-            this.Name.Width = 251;
+            this.MainWindow.Name = "MainWindow2";
+            this.MainWindow.Tag = "Name";
+            this.MainWindow.Text = "Name";
+            this.MainWindow.Width = 251;
             // 
             // Customer
             // 
@@ -127,7 +127,7 @@ namespace Reportinator3000x
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name.Name = "MainWindow2";
+            this.Name = "MainWindow2";
             this.Text = "Reportinator 3000x";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
@@ -145,6 +145,7 @@ namespace Reportinator3000x
         public System.Windows.Forms.ColumnHeader Name;
         public System.Windows.Forms.ColumnHeader Customer;
         private System.Windows.Forms.ColumnHeader Interval;
+        public System.Windows.Forms.ColumnHeader MainWindow;
     }
 }
 
