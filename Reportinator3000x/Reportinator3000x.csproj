@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ReciLib">
+      <HintPath>..\..\ReciWiz\ReciLib\bin\Debug\ReciLib.dll</HintPath>
+    </Reference>
     <Reference Include="ReportLib">
       <HintPath>..\..\GettingReal\ReportLib\bin\Debug\ReportLib.dll</HintPath>
     </Reference>
