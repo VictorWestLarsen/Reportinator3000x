@@ -44,9 +44,10 @@
             // 
             this.ReportNamePage.AutoSize = true;
             this.ReportNamePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReportNamePage.Location = new System.Drawing.Point(12, 8);
+            this.ReportNamePage.Location = new System.Drawing.Point(9, 6);
+            this.ReportNamePage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ReportNamePage.Name = "ReportNamePage";
-            this.ReportNamePage.Size = new System.Drawing.Size(144, 26);
+            this.ReportNamePage.Size = new System.Drawing.Size(118, 22);
             this.ReportNamePage.TabIndex = 0;
             this.ReportNamePage.Text = "Report name:";
             // 
@@ -54,9 +55,10 @@
             // 
             this.labelReportNamePage.AutoSize = true;
             this.labelReportNamePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReportNamePage.Location = new System.Drawing.Point(150, 8);
+            this.labelReportNamePage.Location = new System.Drawing.Point(112, 6);
+            this.labelReportNamePage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelReportNamePage.Name = "labelReportNamePage";
-            this.labelReportNamePage.Size = new System.Drawing.Size(0, 26);
+            this.labelReportNamePage.Size = new System.Drawing.Size(0, 22);
             this.labelReportNamePage.TabIndex = 1;
             // 
             // listView1
@@ -64,10 +66,10 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ModuleName,
             this.ModuleSerialNr});
-            this.listView1.Location = new System.Drawing.Point(12, 115);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listView1.Location = new System.Drawing.Point(9, 93);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(733, 341);
+            this.listView1.Size = new System.Drawing.Size(551, 278);
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -88,53 +90,58 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 76);
+            this.label1.Location = new System.Drawing.Point(9, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 26);
+            this.label1.Size = new System.Drawing.Size(77, 22);
             this.label1.TabIndex = 13;
             this.label1.Text = "Modules";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(766, 115);
+            this.button1.Location = new System.Drawing.Point(574, 93);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 14;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(766, 155);
+            this.button2.Location = new System.Drawing.Point(574, 126);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 15;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(766, 196);
+            this.button3.Location = new System.Drawing.Point(574, 159);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(56, 19);
             this.button3.TabIndex = 16;
             this.button3.Text = "Remove";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(766, 433);
+            this.button4.Location = new System.Drawing.Point(574, 352);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(56, 19);
             this.button4.TabIndex = 17;
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // PageWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 494);
+            this.ClientSize = new System.Drawing.Size(640, 401);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -143,6 +150,7 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.labelReportNamePage);
             this.Controls.Add(this.ReportNamePage);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PageWindow";
             this.Text = "PageWindow";
             this.ResumeLayout(false);
