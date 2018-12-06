@@ -32,5 +32,17 @@ namespace Reportinator3000x
         {
 
         }
+
+        private void CustomerInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadPageList()
+        {
+            foreach(string pageName in Control.GetPageNames("Dør")) {
+
+            }
+        }
     }
 }

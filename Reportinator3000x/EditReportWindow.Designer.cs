@@ -249,6 +249,7 @@
             this.CustomerInput.Name = "CustomerInput";
             this.CustomerInput.Size = new System.Drawing.Size(133, 20);
             this.CustomerInput.TabIndex = 25;
+            this.CustomerInput.TextChanged += new System.EventHandler(this.CustomerInput_TextChanged);
             // 
             // EmailInput
             // 
