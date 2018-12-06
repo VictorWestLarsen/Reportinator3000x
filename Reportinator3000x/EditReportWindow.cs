@@ -30,7 +30,7 @@ namespace Reportinator3000x
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+    
         }
 
         private void CustomerInput_TextChanged(object sender, EventArgs e)
