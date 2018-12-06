@@ -16,6 +16,11 @@ namespace Reportinator3000x
             repo.CreateReport(ReportName);
         }
 
+        public void RemoveReport(string reportName)
+        {
+            repo.RemoveReport(reportName);
+        }
+
         public void SetGlobalParameter(string Customer, string Email, int Interval, string ReportName)
         {
             ReportLib.Report report = null;
