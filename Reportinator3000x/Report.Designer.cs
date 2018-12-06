@@ -42,7 +42,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.Page = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PageNr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddPageButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -289,16 +289,16 @@
             this.PageNr.Text = "PageNr";
             this.PageNr.Width = 63;
             // 
-            // button1
+            // AddPageButton
             // 
-            this.button1.Location = new System.Drawing.Point(578, 131);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 12;
-            this.button1.Tag = "AddPage";
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddPageButton.Location = new System.Drawing.Point(578, 131);
+            this.AddPageButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AddPageButton.Name = "AddPageButton";
+            this.AddPageButton.Size = new System.Drawing.Size(56, 19);
+            this.AddPageButton.TabIndex = 12;
+            this.AddPageButton.Tag = "AddPage";
+            this.AddPageButton.Text = "Add";
+            this.AddPageButton.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -355,7 +355,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddPageButton);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -392,7 +392,7 @@
         private System.Windows.Forms.ListView listView1;
         public System.Windows.Forms.ColumnHeader Page;
         public System.Windows.Forms.ColumnHeader PageNr;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddPageButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
