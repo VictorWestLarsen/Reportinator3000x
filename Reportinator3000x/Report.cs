@@ -64,5 +64,10 @@ namespace Reportinator3000x
         {
             Control.RemovePage(int.Parse(PageList.SelectedItems[0].SubItems[1].Text), NameInput.Text);
         }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

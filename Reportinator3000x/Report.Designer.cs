@@ -96,7 +96,7 @@
             // CustomerInput
             // 
             this.CustomerInput.Location = new System.Drawing.Point(114, 9);
-            this.CustomerInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CustomerInput.Margin = new System.Windows.Forms.Padding(2);
             this.CustomerInput.Name = "CustomerInput";
             this.CustomerInput.Size = new System.Drawing.Size(133, 20);
             this.CustomerInput.TabIndex = 1;
@@ -105,7 +105,7 @@
             // NameInput
             // 
             this.NameInput.Location = new System.Drawing.Point(114, 98);
-            this.NameInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NameInput.Margin = new System.Windows.Forms.Padding(2);
             this.NameInput.Name = "NameInput";
             this.NameInput.Size = new System.Drawing.Size(133, 20);
             this.NameInput.TabIndex = 4;
@@ -114,7 +114,7 @@
             // 
             this.IntervalInput.ForeColor = System.Drawing.SystemColors.GrayText;
             this.IntervalInput.Location = new System.Drawing.Point(114, 67);
-            this.IntervalInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IntervalInput.Margin = new System.Windows.Forms.Padding(2);
             this.IntervalInput.Name = "IntervalInput";
             this.IntervalInput.Size = new System.Drawing.Size(133, 20);
             this.IntervalInput.TabIndex = 3;
@@ -122,7 +122,7 @@
             // EmailInput
             // 
             this.EmailInput.Location = new System.Drawing.Point(114, 36);
-            this.EmailInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmailInput.Margin = new System.Windows.Forms.Padding(2);
             this.EmailInput.Name = "EmailInput";
             this.EmailInput.Size = new System.Drawing.Size(133, 20);
             this.EmailInput.TabIndex = 2;
@@ -237,7 +237,7 @@
             "Westfield",
             "Wiesmann"});
             this.checkedListBox1.Location = new System.Drawing.Point(114, 131);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(133, 184);
             this.checkedListBox1.TabIndex = 8;
@@ -270,7 +270,7 @@
             this.Page,
             this.PageNr});
             this.PageList.Location = new System.Drawing.Point(268, 122);
-            this.PageList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PageList.Margin = new System.Windows.Forms.Padding(2);
             this.PageList.MultiSelect = false;
             this.PageList.Name = "PageList";
             this.PageList.Size = new System.Drawing.Size(276, 211);
@@ -293,7 +293,7 @@
             // AddPageButton
             // 
             this.AddPageButton.Location = new System.Drawing.Point(578, 131);
-            this.AddPageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddPageButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddPageButton.Name = "AddPageButton";
             this.AddPageButton.Size = new System.Drawing.Size(56, 19);
             this.AddPageButton.TabIndex = 12;
@@ -304,7 +304,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(578, 154);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 13;
@@ -315,7 +315,7 @@
             // RemovePageButton_click
             // 
             this.RemovePageButton_click.Location = new System.Drawing.Point(578, 178);
-            this.RemovePageButton_click.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RemovePageButton_click.Margin = new System.Windows.Forms.Padding(2);
             this.RemovePageButton_click.Name = "RemovePageButton_click";
             this.RemovePageButton_click.Size = new System.Drawing.Size(56, 19);
             this.RemovePageButton_click.TabIndex = 14;
@@ -327,7 +327,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(66, 372);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 19);
             this.button4.TabIndex = 15;
@@ -339,7 +339,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(5, 372);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(56, 19);
             this.button5.TabIndex = 16;
@@ -370,9 +370,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Report";
             this.Text = "Report";
+            this.Load += new System.EventHandler(this.Report_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
