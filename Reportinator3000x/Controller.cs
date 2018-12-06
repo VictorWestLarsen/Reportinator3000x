@@ -77,6 +77,19 @@ namespace Reportinator3000x
             return reportItems;
         }
 
+        public Dictionary<string, string> GetReportData(string reportName)
+        {
+            ReportLib.Report report = new ReportLib.Report(reportName);
+            repo.GetReport(reportName);
+            Dictionary<string, string> reportData = new Dictionary<string, string>();
+            reportData["name"] = report.ReportName;
+            reportData["email"] = report.ReportName;
+            reportData["customer"] = report.Customer;
+            reportData["interval"] = report.Interval.ToString();
+
+            return reportData;
+        }
+
 
         public void RemovePage(int pageNr, string reportName)
         {

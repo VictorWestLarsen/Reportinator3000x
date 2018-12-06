@@ -72,7 +72,9 @@ namespace Reportinator3000x
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EditReportWindow editReport = new EditReportWindow(control);
+
+            string reportName = ReportList.SelectedItems[0].SubItems[0].Text;
+            EditReportWindow editReport = new EditReportWindow(control, control.GetReportData(reportName));
             editReport.Show();
         }
     }
