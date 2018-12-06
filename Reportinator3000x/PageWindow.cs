@@ -12,14 +12,30 @@ namespace Reportinator3000x
 {
     public partial class PageWindow : Form
     {
-        public PageWindow()
+        Controller control = new Controller();
+        string ReportName;
+        public PageWindow(Controller con, string reportName)
         {
             InitializeComponent();
+            control = con;
+            ReportName = reportName;
+            NameLabel.Text = reportName;
         }
 
         private void PageWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            control.AddPage(PageNameInput.Text, ReportName);
+            MessageBox.Show("Page added.");
         }
     }
 }

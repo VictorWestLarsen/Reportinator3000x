@@ -77,7 +77,14 @@ namespace Reportinator3000x
             return reportItems;
         }
 
-
+        public void AddPage(string pageName, string reportName)
+        {
+            Page page = new Page();
+            ReportLib.Report targetReport = repo.GetReport(reportName);
+            page.Name = pageName;
+            page.PageNo = targetReport.GetNewPageNr();
+            targetReport.AddPage(page);
+        }
         public void RemovePage(int pageNr, string reportName)
         {
             repo.GetReport(reportName).RemovePage(pageNr);
