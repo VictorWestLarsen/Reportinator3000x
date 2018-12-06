@@ -367,7 +367,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Name = "EditReportWindow";
-            this.Text = "EditReportWindow";
+            this.Text = "Edit Report";
             this.Load += new System.EventHandler(this.EditReportWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
