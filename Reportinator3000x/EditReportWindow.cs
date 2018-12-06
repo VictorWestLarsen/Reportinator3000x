@@ -10,25 +10,23 @@ using System.Windows.Forms;
 
 namespace Reportinator3000x
 {
-    public partial class PageWindow : Form
-    { 
-
+    public partial class EditReportWindow : Form
+    {
         private Controller Control;
-    
-        public PageWindow(Controller control)
+        public EditReportWindow(Controller control)
         {
             InitializeComponent();
-            Control = control;
+            Control = control;    
         }
 
-        private void PageWindow_Load(object sender, EventArgs e)
+        private void EditReportWindow_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void AddModule_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
