@@ -19,15 +19,18 @@ namespace Reportinator3000x
         public void SetGlobalParameter(string Customer, string Email, int Interval, string ReportName)
         {
             ReportLib.Report report = null;
-            foreach (ReportLib.Report r in repo.GetReports()) {
-                if (ReportName.Equals(r.ReportName)) {
+            foreach (ReportLib.Report r in repo.GetReports())
+            {
+                if (ReportName.Equals(r.ReportName))
+                {
                     report = r;
                     report.Customer = Customer;
                     report.Email = Email;
                     report.Interval = Interval;
                 }
             }
-            if (report == null) {
+            if (report == null)
+            {
                 throw new Exception("Report does not exist.");
             }
         }
@@ -35,8 +38,10 @@ namespace Reportinator3000x
         public void AddModule(string reportName, int PageNr, string moduleName, string serialNumber)
         {
             ReportLib.Report report = null;
-            foreach (ReportLib.Report r in repo.GetReports()) {
-                if (reportName.Equals(r.ReportName)) {
+            foreach (ReportLib.Report r in repo.GetReports())
+            {
+                if (reportName.Equals(r.ReportName))
+                {
                     report = r;
                     break;
                 }
@@ -55,7 +60,8 @@ namespace Reportinator3000x
         {
             List<Dictionary<string, string>> reportItems = new List<Dictionary<string, string>>();
 
-            foreach(ReportLib.Report report in repo.GetReports()) {
+            foreach (ReportLib.Report report in repo.GetReports())
+            {
                 Dictionary<string, string> context = new Dictionary<string, string>();
                 context["name"] = report.ReportName;
                 context["customer"] = report.Customer;
@@ -66,5 +72,10 @@ namespace Reportinator3000x
             return reportItems;
         }
 
+
+        public void RemovePage(int pageNr, string reportName)
+        {
+            repo.GetReport(reportName).RemovePage(pageNr);
+        }
     }
 }
