@@ -274,8 +274,10 @@
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(296, 211);
             this.listView1.TabIndex = 11;
+            this.listView1.Tag = "ListVewPages";
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Page
             // 
@@ -321,6 +323,7 @@
             this.button3.Tag = "RemovePage";
             this.button3.Text = "Remove";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -371,6 +374,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Report";
             this.Text = "Report";
+            this.Load += new System.EventHandler(this.Report_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

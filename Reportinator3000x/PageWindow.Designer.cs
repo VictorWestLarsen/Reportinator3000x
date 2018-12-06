@@ -34,7 +34,7 @@
             this.ModuleName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ModuleSerialNr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddModule = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -98,15 +98,16 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Modules";
             // 
-            // button1
+            // AddModule
             // 
-            this.button1.Location = new System.Drawing.Point(574, 93);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddModule.Location = new System.Drawing.Point(574, 93);
+            this.AddModule.Margin = new System.Windows.Forms.Padding(2);
+            this.AddModule.Name = "AddModule";
+            this.AddModule.Size = new System.Drawing.Size(56, 19);
+            this.AddModule.TabIndex = 14;
+            this.AddModule.Text = "Add";
+            this.AddModule.UseVisualStyleBackColor = true;
+            this.AddModule.Click += new System.EventHandler(this.AddModule_Click);
             // 
             // button2
             // 
@@ -146,7 +147,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddModule);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.labelReportNamePage);
@@ -168,7 +169,7 @@
         public System.Windows.Forms.ColumnHeader ModuleName;
         public System.Windows.Forms.ColumnHeader ModuleSerialNr;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddModule;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
