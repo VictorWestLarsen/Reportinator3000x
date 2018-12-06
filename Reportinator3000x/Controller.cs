@@ -9,20 +9,17 @@ namespace Reportinator3000x
 {
     public class Controller
     {
-        private List<ReportLib.Report> reports = new List<ReportLib.Report>();
+        private ReportRepo repo = new ReportRepo();
 
         public void CreateReport(string ReportName)
         {
-            
-            ReportLib.Report report = new ReportLib.Report(ReportName);
-            reports.Add(report);
-            Console.WriteLine("Report Created!");
+            repo.CreateReport(ReportName);
         }
 
         public void SetGlobalParameter(string Customer, string Email, int Interval, string ReportName)
         {
             ReportLib.Report report = null;
-            foreach (ReportLib.Report r in reports) {
+            foreach (ReportLib.Report r in repo.GetReports()) {
                 if (ReportName.Equals(r.ReportName)) {
                     report = r;
                     report.Customer = Customer;
@@ -38,7 +35,7 @@ namespace Reportinator3000x
         public void AddModule(string reportName, int PageNr, string moduleName, string serialNumber)
         {
             ReportLib.Report report = null;
-            foreach (ReportLib.Report r in reports) {
+            foreach (ReportLib.Report r in repo.GetReports()) {
                 if (reportName.Equals(r.ReportName)) {
                     report = r;
                     break;
@@ -51,19 +48,14 @@ namespace Reportinator3000x
 
         public ReportLib.Report GetReport(string reportName)
         {
-            foreach(ReportLib.Report report in reports) {
-                if (report.ReportName.Equals(reportName)) {
-                    return report;
-                }
-            }
-            return null;
+            return repo.GetReport(reportName);
         }
 
         public List<Dictionary<string, string>> GetReportsOverview()
         {
             List<Dictionary<string, string>> reportItems = new List<Dictionary<string, string>>();
 
-            foreach(ReportLib.Report report in reports) {
+            foreach(ReportLib.Report report in repo.GetReports()) {
                 Dictionary<string, string> context = new Dictionary<string, string>();
                 context["name"] = report.ReportName;
                 context["customer"] = report.Customer;
