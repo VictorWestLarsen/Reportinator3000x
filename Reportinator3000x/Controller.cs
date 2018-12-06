@@ -79,11 +79,11 @@ namespace Reportinator3000x
 
         public Dictionary<string, string> GetReportData(string reportName)
         {
-            ReportLib.Report report = new ReportLib.Report(reportName);
+            ReportLib.Report report = repo.GetReport(reportName);
             repo.GetReport(reportName);
             Dictionary<string, string> reportData = new Dictionary<string, string>();
             reportData["name"] = report.ReportName;
-            reportData["email"] = report.ReportName;
+            reportData["email"] = report.Email;
             reportData["customer"] = report.Customer;
             reportData["interval"] = report.Interval.ToString();
 
