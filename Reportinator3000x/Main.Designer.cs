@@ -92,6 +92,7 @@ namespace Reportinator3000x
             this.ReportList.FullRowSelect = true;
             this.ReportList.Location = new System.Drawing.Point(14, 43);
             this.ReportList.Margin = new System.Windows.Forms.Padding(2);
+            this.ReportList.MultiSelect = false;
             this.ReportList.Name = "ReportList";
             this.ReportList.Size = new System.Drawing.Size(618, 287);
             this.ReportList.TabIndex = 12;
@@ -138,7 +139,6 @@ namespace Reportinator3000x
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "MainWindow2";
             this.Text = "Reportinator 3000x";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);

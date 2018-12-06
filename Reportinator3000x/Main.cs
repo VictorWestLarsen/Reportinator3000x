@@ -50,7 +50,9 @@ namespace Reportinator3000x
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            string reportName = ReportList.SelectedItems[0].SubItems[0].Text;
+            control.RemoveReport(reportName);
+            RefreshBtn_Click(null, null);
         }
         private void CreateReportBtnClick(object sender, EventArgs e)
         {
