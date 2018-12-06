@@ -30,7 +30,7 @@
         {
             this.ReportNamePage = new System.Windows.Forms.Label();
             this.labelReportNamePage = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.ModuleList = new System.Windows.Forms.ListView();
             this.ModuleName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ModuleSerialNr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
@@ -61,19 +61,19 @@
             this.labelReportNamePage.Size = new System.Drawing.Size(0, 22);
             this.labelReportNamePage.TabIndex = 1;
             // 
-            // listView1
+            // ModuleList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ModuleList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ModuleName,
             this.ModuleSerialNr});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(9, 93);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(551, 278);
-            this.listView1.TabIndex = 12;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.ModuleList.FullRowSelect = true;
+            this.ModuleList.Location = new System.Drawing.Point(9, 93);
+            this.ModuleList.Margin = new System.Windows.Forms.Padding(2);
+            this.ModuleList.Name = "ModuleList";
+            this.ModuleList.Size = new System.Drawing.Size(551, 278);
+            this.ModuleList.TabIndex = 12;
+            this.ModuleList.UseCompatibleStateImageBehavior = false;
+            this.ModuleList.View = System.Windows.Forms.View.Details;
             // 
             // ModuleName
             // 
@@ -149,7 +149,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.AddModule);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.ModuleList);
             this.Controls.Add(this.labelReportNamePage);
             this.Controls.Add(this.ReportNamePage);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -165,7 +165,7 @@
 
         private System.Windows.Forms.Label ReportNamePage;
         private System.Windows.Forms.Label labelReportNamePage;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ModuleList;
         public System.Windows.Forms.ColumnHeader ModuleName;
         public System.Windows.Forms.ColumnHeader ModuleSerialNr;
         private System.Windows.Forms.Label label1;
