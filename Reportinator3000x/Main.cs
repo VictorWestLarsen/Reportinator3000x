@@ -69,5 +69,13 @@ namespace Reportinator3000x
                 ReportList.Items.Add(row);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            string reportName = ReportList.SelectedItems[0].SubItems[0].Text;
+            EditReportWindow editReport = new EditReportWindow(control, control.GetReportData(reportName));
+            editReport.Show();
+        }
     }
 }

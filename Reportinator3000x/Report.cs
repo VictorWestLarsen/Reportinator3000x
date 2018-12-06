@@ -42,19 +42,32 @@ namespace Reportinator3000x
                 return;
             }
 
+
             Control.CreateReport(NameInput.Text);
             Control.SetGlobalParameter(CustomerInput.Text, EmailInput.Text, interval, NameInput.Text);
             MessageBox.Show("Report created, refresh the main window please");
+
+            //Reset global parameters to empty string
+            string clear = "";
+            CustomerInput.Text = clear;
+            EmailInput.Text = clear;
+            IntervalInput.Text = clear;
+            NameInput.Text = clear;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Control.RemovePage(int.Parse(PageList.SelectedItems[0].SubItems[1].Text), NameInput.Text);
+        }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
