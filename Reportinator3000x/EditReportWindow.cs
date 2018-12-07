@@ -13,6 +13,7 @@ namespace Reportinator3000x
     public partial class EditReportWindow : Form
     {
         private Controller Control;
+        string oldName;
         public EditReportWindow(Controller control, Dictionary<string, string> reportData)
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace Reportinator3000x
             CustomerInput.Text = reportData["customer"];
             IntervalInput.Text = reportData["interval"];
             ReportNameInput.Text = reportData["name"];
+            oldName = reportData["name"];
         }
 
         private void EditReportWindow_Load(object sender, EventArgs e)
@@ -30,7 +32,9 @@ namespace Reportinator3000x
 
         private void button5_Click(object sender, EventArgs e)
         {
-    
+            Control.ChangeReportName(oldName, ReportNameInput.Text);
+            Control.SetGlobalParameter(CustomerInput.Text, EmailInput.Text, int.Parse(IntervalInput.Text), ReportNameInput.Text);
+            oldName = ReportNameInput.Text;
         }
 
         private void CustomerInput_TextChanged(object sender, EventArgs e)

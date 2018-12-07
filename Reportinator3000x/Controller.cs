@@ -21,6 +21,13 @@ namespace Reportinator3000x
             repo.RemoveReport(reportName);
         }
 
+        public void ChangeReportName(string oldName, string newName)
+        {
+            ReportLib.Report report = GetReport(oldName);
+            report.ReportName = newName;
+
+        }
+
         public void SetGlobalParameter(string Customer, string Email, int Interval, string ReportName)
         {
             ReportLib.Report report = null;
