@@ -72,10 +72,14 @@ namespace Reportinator3000x
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            string reportName = ReportList.SelectedItems[0].SubItems[0].Text;
-            EditReportWindow editReport = new EditReportWindow(control, control.GetReportData(reportName));
-            editReport.Show();
+            try {
+                string reportName = ReportList.SelectedItems[0].SubItems[0].Text;
+                EditReportWindow editReport = new EditReportWindow(control, control.GetReportData(reportName));
+                editReport.Show();
+            } catch (ArgumentOutOfRangeException) {
+                MessageBox.Show("You must choose a report to edit");
+            }
+            
         }
     }
 }
