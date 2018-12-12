@@ -109,7 +109,7 @@
             this.MinValue,
             this.MaxValue});
             this.listView1.Location = new System.Drawing.Point(13, 116);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(545, 246);
             this.listView1.TabIndex = 13;
@@ -144,7 +144,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(574, 116);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 14;
@@ -154,7 +154,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(574, 149);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 15;
@@ -164,7 +164,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(574, 181);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 19);
             this.button3.TabIndex = 16;
@@ -174,7 +174,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(574, 343);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 19);
             this.button4.TabIndex = 17;
@@ -196,9 +196,10 @@
             this.Controls.Add(this.PageNrModules);
             this.Controls.Add(this.labelReportNameModules);
             this.Controls.Add(this.ReportNameModules);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ModulesWindow";
             this.Text = "ModulesWindow";
+            this.Load += new System.EventHandler(this.ModulesWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

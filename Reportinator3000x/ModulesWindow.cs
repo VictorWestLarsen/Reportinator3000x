@@ -21,5 +21,10 @@ namespace Reportinator3000x
         {
 
         }
+
+        private void ModulesWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
