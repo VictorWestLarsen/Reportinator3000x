@@ -57,5 +57,10 @@ namespace Reportinator3000x
            PageWindow pageWindow = new PageWindow(Control, oldName);
             pageWindow.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
