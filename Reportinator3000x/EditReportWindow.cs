@@ -45,6 +45,7 @@ namespace Reportinator3000x
 
         private void loadPageList()
         {
+            PageList.Items.Clear();
             foreach(string pageName in Control.GetPageNames(oldName)) {
                 ListViewItem row = new ListViewItem(pageName);
                 PageList.Items.Add(row);
