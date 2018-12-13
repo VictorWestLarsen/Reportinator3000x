@@ -38,13 +38,6 @@
             this.EmailInput = new System.Windows.Forms.TextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.PageList = new System.Windows.Forms.ListView();
-            this.Page = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PageNr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.AddPageButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.RemovePageButton_click = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -109,6 +102,7 @@
             this.NameInput.Name = "NameInput";
             this.NameInput.Size = new System.Drawing.Size(133, 20);
             this.NameInput.TabIndex = 4;
+            this.NameInput.TextChanged += new System.EventHandler(this.NameInput_TextChanged);
             // 
             // IntervalInput
             // 
@@ -118,6 +112,7 @@
             this.IntervalInput.Name = "IntervalInput";
             this.IntervalInput.Size = new System.Drawing.Size(133, 20);
             this.IntervalInput.TabIndex = 3;
+            this.IntervalInput.TextChanged += new System.EventHandler(this.IntervalInput_TextChanged);
             // 
             // EmailInput
             // 
@@ -126,6 +121,7 @@
             this.EmailInput.Name = "EmailInput";
             this.EmailInput.Size = new System.Drawing.Size(133, 20);
             this.EmailInput.TabIndex = 2;
+            this.EmailInput.TextChanged += new System.EventHandler(this.EmailInput_TextChanged);
             // 
             // checkedListBox1
             // 
@@ -253,81 +249,9 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Logo:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(264, 98);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 22);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Pages:";
-            // 
-            // PageList
-            // 
-            this.PageList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Page,
-            this.PageNr});
-            this.PageList.Location = new System.Drawing.Point(268, 122);
-            this.PageList.Margin = new System.Windows.Forms.Padding(2);
-            this.PageList.MultiSelect = false;
-            this.PageList.Name = "PageList";
-            this.PageList.Size = new System.Drawing.Size(276, 211);
-            this.PageList.TabIndex = 11;
-            this.PageList.UseCompatibleStateImageBehavior = false;
-            this.PageList.View = System.Windows.Forms.View.Details;
-            // 
-            // Page
-            // 
-            this.Page.Tag = "Page";
-            this.Page.Text = "Page";
-            this.Page.Width = 327;
-            // 
-            // PageNr
-            // 
-            this.PageNr.Tag = "Page";
-            this.PageNr.Text = "PageNr";
-            this.PageNr.Width = 63;
-            // 
-            // AddPageButton
-            // 
-            this.AddPageButton.Location = new System.Drawing.Point(578, 131);
-            this.AddPageButton.Margin = new System.Windows.Forms.Padding(2);
-            this.AddPageButton.Name = "AddPageButton";
-            this.AddPageButton.Size = new System.Drawing.Size(56, 19);
-            this.AddPageButton.TabIndex = 12;
-            this.AddPageButton.Tag = "AddPage";
-            this.AddPageButton.Text = "Add";
-            this.AddPageButton.UseVisualStyleBackColor = true;
-            this.AddPageButton.Click += new System.EventHandler(this.AddPageButton_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(578, 154);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 19);
-            this.button2.TabIndex = 13;
-            this.button2.Tag = "EditPage";
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // RemovePageButton_click
-            // 
-            this.RemovePageButton_click.Location = new System.Drawing.Point(578, 178);
-            this.RemovePageButton_click.Margin = new System.Windows.Forms.Padding(2);
-            this.RemovePageButton_click.Name = "RemovePageButton_click";
-            this.RemovePageButton_click.Size = new System.Drawing.Size(56, 19);
-            this.RemovePageButton_click.TabIndex = 14;
-            this.RemovePageButton_click.Tag = "RemovePage";
-            this.RemovePageButton_click.Text = "Remove";
-            this.RemovePageButton_click.UseVisualStyleBackColor = true;
-            this.RemovePageButton_click.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(66, 372);
+            this.button4.Location = new System.Drawing.Point(302, 371);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 19);
@@ -339,7 +263,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(5, 372);
+            this.button5.Location = new System.Drawing.Point(362, 371);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(56, 19);
@@ -353,14 +277,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 401);
+            this.ClientSize = new System.Drawing.Size(429, 401);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.RemovePageButton_click);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.AddPageButton);
-            this.Controls.Add(this.PageList);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.EmailInput);
@@ -392,13 +311,6 @@
         private System.Windows.Forms.TextBox EmailInput;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListView PageList;
-        public System.Windows.Forms.ColumnHeader Page;
-        public System.Windows.Forms.ColumnHeader PageNr;
-        private System.Windows.Forms.Button AddPageButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button RemovePageButton_click;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
     }

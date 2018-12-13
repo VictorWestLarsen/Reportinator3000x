@@ -35,6 +35,7 @@ namespace Reportinator3000x
             Control.ChangeReportName(oldName, ReportNameInput.Text);
             Control.SetGlobalParameter(CustomerInput.Text, EmailInput.Text, int.Parse(IntervalInput.Text), ReportNameInput.Text);
             oldName = ReportNameInput.Text;
+            MessageBox.Show("Report has been modified.");
         }
 
         private void CustomerInput_TextChanged(object sender, EventArgs e)
