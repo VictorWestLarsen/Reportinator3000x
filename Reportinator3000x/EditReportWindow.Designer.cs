@@ -322,6 +322,7 @@
             this.AddPageButton.Tag = "AddPage";
             this.AddPageButton.Text = "Add";
             this.AddPageButton.UseVisualStyleBackColor = true;
+            this.AddPageButton.Click += new System.EventHandler(this.AddPageButton_Click);
             // 
             // button2
             // 

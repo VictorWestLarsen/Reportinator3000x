@@ -37,5 +37,10 @@ namespace Reportinator3000x
             control.AddPage(PageNameInput.Text, ReportName);
             MessageBox.Show("Page added.");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
