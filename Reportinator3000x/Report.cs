@@ -60,17 +60,23 @@ namespace Reportinator3000x
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Control.RemovePage(int.Parse(PageList.SelectedItems[0].SubItems[1].Text), NameInput.Text);
-        }
 
         private void Report_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void AddPageButton_Click(object sender, EventArgs e)
+        private void EmailInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntervalInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NameInput_TextChanged(object sender, EventArgs e)
         {
 
         }
