@@ -44,8 +44,9 @@ namespace Reportinator3000x
 
         private void loadPageList()
         {
-            foreach(string pageName in Control.GetPageNames("Dør")) {
-
+            foreach(string pageName in Control.GetPageNames(oldName)) {
+                ListViewItem row = new ListViewItem(pageName);
+                PageList.Items.Add(row);
             }
         }
 
