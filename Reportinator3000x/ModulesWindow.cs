@@ -16,6 +16,12 @@ namespace Reportinator3000x
         public ModulesWindow()
         {
             InitializeComponent();
+            List<string> listOfModules = new List<string>();
+            listOfModules = control.GetAvailableModuels();
+            foreach (string strings in listOfModules)
+            {
+                DropdownModules.Items.Add(strings);
+            }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -30,12 +36,7 @@ namespace Reportinator3000x
 
         private void DropdownModules_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<string> listOfModules = new List<string>();
-            listOfModules = control.GetAvailableModuels();
-            foreach (string strings in listOfModules)
-            {
-                DropdownModules.Items.Add(strings);
-            }
+            
          
         
         }
