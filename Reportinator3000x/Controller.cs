@@ -116,5 +116,10 @@ namespace Reportinator3000x
             }
             return pageNames;
         }
+
+        public void EditPage(string reportName, int pageNumber, string pageName)
+        {
+            repo.EditPage(reportName, pageNumber, pageName);
+        }
     }
 }
