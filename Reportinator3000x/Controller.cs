@@ -117,9 +117,16 @@ namespace Reportinator3000x
             return pageNames;
         }
 
-        public void EditPage(string reportName, int pageNumber, string pageName)
+        public List<string> GetAvailableModuels()
         {
-            repo.EditPage(reportName, pageNumber, pageName);
+            List<string> AvailableModules = new List<string>();
+
+            foreach (Modules module in Enum.GetValues(typeof(Modules)))
+            {
+                AvailableModules.Add(module.ToString());
+            }
+
+            return AvailableModules;
         }
     }
 }

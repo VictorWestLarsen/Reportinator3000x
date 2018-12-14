@@ -40,7 +40,13 @@ namespace Reportinator3000x
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ModulesWindow modulesWindow = new ModulesWindow();
+            modulesWindow.Show();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
         private void EditPage_Click(object sender, EventArgs e)
         {
