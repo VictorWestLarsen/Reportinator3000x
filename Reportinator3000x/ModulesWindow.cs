@@ -12,6 +12,7 @@ namespace Reportinator3000x
 {
     public partial class ModulesWindow : Form
     {
+        Controller control = new Controller();
         public ModulesWindow()
         {
             InitializeComponent();
@@ -25,6 +26,11 @@ namespace Reportinator3000x
         private void ModulesWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void DropdownModules_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DropdownModules.Items.Add();
         }
     }
 }
