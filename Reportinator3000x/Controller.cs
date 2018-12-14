@@ -116,5 +116,17 @@ namespace Reportinator3000x
             }
             return pageNames;
         }
+
+        public List<string> GetAvailableModuels()
+        {
+            List<string> AvailableModules = new List<string>();
+
+            foreach (Modules module in Enum.GetValues(typeof(Modules)))
+            {
+                AvailableModules.Add(module.ToString());
+            }
+
+            return AvailableModules;
+        }
     }
 }

@@ -30,7 +30,14 @@ namespace Reportinator3000x
 
         private void DropdownModules_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DropdownModules.Items.Add();
+            List<string> listOfModules = new List<string>();
+            listOfModules = control.GetAvailableModuels();
+            foreach (string strings in listOfModules)
+            {
+                DropdownModules.Items.Add(strings);
+            }
+         
+        
         }
     }
 }

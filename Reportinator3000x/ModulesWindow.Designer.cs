@@ -95,6 +95,7 @@
             // 
             // DropdownModules
             // 
+            this.DropdownModules.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DropdownModules.FormattingEnabled = true;
             this.DropdownModules.Location = new System.Drawing.Point(163, 82);
             this.DropdownModules.Name = "DropdownModules";
