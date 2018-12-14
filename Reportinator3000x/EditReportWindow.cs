@@ -62,5 +62,10 @@ namespace Reportinator3000x
         {
             this.Close();
         }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            loadPageList();
+        }
     }
 }

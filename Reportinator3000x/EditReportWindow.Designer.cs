@@ -47,6 +47,7 @@
             this.AddPageButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.RemovePageButton_click = new System.Windows.Forms.Button();
+            this.RefreshButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button5
@@ -347,11 +348,22 @@
             this.RemovePageButton_click.Text = "Remove";
             this.RemovePageButton_click.UseVisualStyleBackColor = true;
             // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Location = new System.Drawing.Point(473, 85);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(75, 23);
+            this.RefreshButton.TabIndex = 34;
+            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
             // EditReportWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 401);
+            this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.RemovePageButton_click);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.AddPageButton);
@@ -398,5 +410,6 @@
         private System.Windows.Forms.Button AddPageButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button RemovePageButton_click;
+        private System.Windows.Forms.Button RefreshButton;
     }
 }
