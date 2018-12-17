@@ -35,6 +35,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.DropdownModules = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.ParameterPanel = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
             // ReportNameModules
@@ -115,11 +116,26 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Choose Modules:";
             // 
+            // ParameterPanel
+            // 
+            this.ParameterPanel.ColumnCount = 2;
+            this.ParameterPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ParameterPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ParameterPanel.Location = new System.Drawing.Point(13, 123);
+            this.ParameterPanel.Name = "ParameterPanel";
+            this.ParameterPanel.RowCount = 3;
+            this.ParameterPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ParameterPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ParameterPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.ParameterPanel.Size = new System.Drawing.Size(314, 133);
+            this.ParameterPanel.TabIndex = 21;
+            // 
             // ModulesWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 282);
+            this.Controls.Add(this.ParameterPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DropdownModules);
             this.Controls.Add(this.button4);
@@ -145,5 +161,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox DropdownModules;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel ParameterPanel;
     }
 }

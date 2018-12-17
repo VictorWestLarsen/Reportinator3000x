@@ -13,11 +13,14 @@ namespace Reportinator3000x
     public partial class ModulesWindow : Form
     {
         Controller control = new Controller();
+        Dictionary<string, TextBox> parameterBacking = new Dictionary<string, TextBox>();
+
         public ModulesWindow()
         {
             InitializeComponent();
             List<string> listOfModules = new List<string>();
             listOfModules = control.GetAvailableModuels();
+
             foreach (string strings in listOfModules)
             {
                 DropdownModules.Items.Add(strings);
@@ -36,9 +39,14 @@ namespace Reportinator3000x
 
         private void DropdownModules_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-         
-        
+            ParameterPanel.Controls.Clear();
+            List<string> requiredParams = control.GetRequiredParameters(DropdownModules.SelectedItem.ToString());
+
+            for (int i = 0; i < requiredParams.Count; i++) {
+                ParameterPanel.Controls.Add(new Label() { Text = requiredParams[i]}, 0, i);
+                ParameterPanel.Controls.Add(new TextBox(), 1, i);
+
+            }
         }
     }
 }

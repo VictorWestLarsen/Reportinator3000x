@@ -51,7 +51,7 @@ namespace Reportinator3000x
         private void EditPage_Click(object sender, EventArgs e)
         {
 
-            control.EditPage();
+            // control.EditPage();
         }
     }
 }

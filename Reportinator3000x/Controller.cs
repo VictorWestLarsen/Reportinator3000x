@@ -128,5 +128,34 @@ namespace Reportinator3000x
 
             return AvailableModules;
         }
+
+        public List<string> GetRequiredParameters(string moduleName)
+        {
+            Module selectedModule = null;
+
+
+            if (moduleName.Equals(Modules.IncomingRetailVehicles.ToString())) {
+                selectedModule = new IncomingRetailVehicles(null);
+            }
+            else if (moduleName.Equals(Modules.MDSPerFuelTypeForSegment.ToString())) {
+                selectedModule = new MDSPerFuelTypeForSegment(null);
+            }
+            else if (moduleName.Equals(Modules.SalesOverTime.ToString())) {
+                selectedModule = new SalesOverTime(null);
+            }
+            else if (moduleName.Equals(Modules.StockOverTime.ToString())) {
+                selectedModule = new StockOverTime(null);
+            }
+            else if (moduleName.Equals(Modules.StockPerMake.ToString())) {
+                selectedModule = new StockPerMake(null);
+            }
+
+            if (selectedModule == null) {
+                throw new Exception("Module does not exist");
+            } 
+            else {
+                return selectedModule.GetRequiredParameters();
+            }
+        }
     }
 }
