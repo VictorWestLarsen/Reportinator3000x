@@ -26,5 +26,10 @@ namespace Reportinator3000x
         {
 
         }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

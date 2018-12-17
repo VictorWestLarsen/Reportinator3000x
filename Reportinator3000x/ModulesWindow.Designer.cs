@@ -32,10 +32,10 @@
             this.labelReportNameModules = new System.Windows.Forms.Label();
             this.PageNrModules = new System.Windows.Forms.Label();
             this.labelPageNrModules = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.DropdownModules = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ParameterPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ReportNameModules
@@ -84,16 +84,6 @@
             this.labelPageNrModules.Tag = "labelPageNrModules";
             this.labelPageNrModules.Text = "PageNr";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(386, 252);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 19);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Cancel";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // DropdownModules
             // 
             this.DropdownModules.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -130,15 +120,25 @@
             this.ParameterPanel.Size = new System.Drawing.Size(314, 133);
             this.ParameterPanel.TabIndex = 21;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(386, 251);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 19);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ModulesWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 282);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ParameterPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DropdownModules);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.labelPageNrModules);
             this.Controls.Add(this.PageNrModules);
             this.Controls.Add(this.labelReportNameModules);
@@ -158,9 +158,9 @@
         private System.Windows.Forms.Label labelReportNameModules;
         private System.Windows.Forms.Label PageNrModules;
         private System.Windows.Forms.Label labelPageNrModules;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox DropdownModules;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel ParameterPanel;
+        private System.Windows.Forms.Button button1;
     }
 }

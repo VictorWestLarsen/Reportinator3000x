@@ -12,12 +12,18 @@ namespace Reportinator3000x
 {
     public partial class ModulesWindow : Form
     {
-        Controller control = new Controller();
+        Controller control;
         Dictionary<string, TextBox> parameterBacking = new Dictionary<string, TextBox>();
+        private string _ReportName;
 
-        public ModulesWindow()
+        public ModulesWindow(Controller _control, string reportName, int pageNr)
         {
+            control = _control;
             InitializeComponent();
+            _ReportName = reportName;
+            labelPageNrModules.Text = pageNr.ToString();
+            labelReportNameModules.Text = reportName;
+
             List<string> listOfModules = new List<string>();
             listOfModules = control.GetAvailableModuels();
 
@@ -43,10 +49,25 @@ namespace Reportinator3000x
             List<string> requiredParams = control.GetRequiredParameters(DropdownModules.SelectedItem.ToString());
 
             for (int i = 0; i < requiredParams.Count; i++) {
+                TextBox entry = new TextBox();
                 ParameterPanel.Controls.Add(new Label() { Text = requiredParams[i]}, 0, i);
-                ParameterPanel.Controls.Add(new TextBox(), 1, i);
-
+                ParameterPanel.Controls.Add(entry, 1, i);
+                parameterBacking[requiredParams[i]] = entry;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string moduleName = DropdownModules.SelectedItem.ToString();
+            List<string> requiredParams = control.GetRequiredParameters(moduleName);
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            int nr = int.Parse(labelPageNrModules.Text);
+
+            foreach(string param in requiredParams) {
+                parameters[param] = parameterBacking[param].ToString();
+            }
+
+            control.AddModule(_ReportName, nr, null, control.GetSerialNr(moduleName), parameters);
         }
     }
 }

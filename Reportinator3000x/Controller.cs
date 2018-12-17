@@ -47,19 +47,9 @@ namespace Reportinator3000x
             }
         }
 
-        public void AddModule(string reportName, int PageNr, string moduleName, string serialNumber)
+        public void AddModule(string reportName, int PageNr, string moduleName, string serialNumber, Dictionary<string, string> parameters)
         {
-            ReportLib.Report report = null;
-            foreach (ReportLib.Report r in repo.GetReports())
-            {
-                if (reportName.Equals(r.ReportName))
-                {
-                    report = r;
-                    break;
-                }
-            }
-
-            report.ChooseModules(PageNr, moduleName, serialNumber);
+            repo.AddModule(reportName, PageNr, moduleName, serialNumber, parameters);
 
         }
 
@@ -156,6 +146,35 @@ namespace Reportinator3000x
             else {
                 return selectedModule.GetRequiredParameters();
             }
+        }
+
+        public string GetSerialNr(string moduleName)
+        {
+            string serialNo = null;
+
+            if (moduleName.Equals(Modules.IncomingRetailVehicles.ToString())) {
+                serialNo = IncomingRetailVehicles.SerialNo;
+            } else if (moduleName.Equals(Modules.MDSPerFuelTypeForSegment.ToString())) {
+                serialNo = MDSPerFuelTypeForSegment.SerialNo;
+            } else if (moduleName.Equals(Modules.SalesOverTime.ToString())) {
+                serialNo = SalesOverTime.SerialNo;
+            } else if (moduleName.Equals(Modules.StockOverTime.ToString())) {
+                serialNo = StockOverTime.SerialNo;
+            } else if (moduleName.Equals(Modules.StockPerMake.ToString())) {
+                serialNo = StockPerMake.SerialNo;
+            }
+
+            if (serialNo != null) {
+                return serialNo;
+            }
+            throw new Exception("Invalid module name");
+            
+        }
+
+        public int GetNewPageNr(string reportName)
+        {
+            ReportLib.Report r = repo.GetReport(reportName);
+            return r.GetNewPageNr();
         }
     }
 }

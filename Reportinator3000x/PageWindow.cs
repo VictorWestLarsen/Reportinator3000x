@@ -12,13 +12,15 @@ namespace Reportinator3000x
 {
     public partial class PageWindow : Form
     {
-        Controller control = new Controller();
+        Controller control;
         string ReportName;
-        public PageWindow(Controller con, string reportName)
+        int pageNr;
+        public PageWindow(Controller con, string reportName, int pgNr)
         {
             InitializeComponent();
             control = con;
             ReportName = reportName;
+            pageNr = pgNr;
             NameLabel.Text = reportName;
         }
 
@@ -40,7 +42,7 @@ namespace Reportinator3000x
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ModulesWindow modulesWindow = new ModulesWindow();
+            ModulesWindow modulesWindow = new ModulesWindow(control, ReportName, pageNr);
             modulesWindow.Show();
         }
 
@@ -52,6 +54,16 @@ namespace Reportinator3000x
         {
 
             // control.EditPage();
+        }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            ReportLib.Report r = control.GetReport(ReportName);
+            ReportLib.Page p = r.GetPage(pageNr);
+            moduleList.Items.Clear();
+            foreach(ReportLib.Module module in p.GetModules()) {
+                moduleList.Items.Add(new ListViewItem(new[] { module.ToString() }));
+            }
         }
     }
 }
