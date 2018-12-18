@@ -56,7 +56,7 @@ namespace Reportinator3000x
             NameInput.Text = clear;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void ReportCreateCancelBtn(object sender, EventArgs e)
         {
             this.Close();
         }
