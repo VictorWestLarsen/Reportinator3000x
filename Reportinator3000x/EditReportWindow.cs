@@ -30,14 +30,14 @@ namespace Reportinator3000x
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+
+        private void EditReportModifyBtn(object sender, EventArgs e)
         {
             Control.ChangeReportName(oldName, ReportNameInput.Text);
             Control.SetGlobalParameter(CustomerInput.Text, EmailInput.Text, int.Parse(IntervalInput.Text), ReportNameInput.Text);
             oldName = ReportNameInput.Text;
             MessageBox.Show("Report has been modified.");
         }
-
         private void CustomerInput_TextChanged(object sender, EventArgs e)
         {
 
@@ -59,7 +59,7 @@ namespace Reportinator3000x
            pageWindow.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void EditReportWindowCancelBtn(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -72,5 +72,17 @@ namespace Reportinator3000x
         private void RemovePageButton_click_Click(object sender, EventArgs e)
         {
         }
+
+        private void EditReportPageBtn(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BrowseBtn(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.ShowDialog();
+        }
     }
 }
+

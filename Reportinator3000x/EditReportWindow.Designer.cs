@@ -30,7 +30,6 @@
         {
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.RemovePageButton_click = new System.Windows.Forms.Button();
             this.RefreshButton = new System.Windows.Forms.Button();
+            this.browseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button5
@@ -60,7 +60,7 @@
             this.button5.Tag = "ReportCreate";
             this.button5.Text = "Modify";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.EditReportModifyBtn);
             // 
             // button4
             // 
@@ -72,122 +72,7 @@
             this.button4.Tag = "ReportCancel";
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Ford",
-            "Audi",
-            "BMW",
-            "Renault",
-            "Citroën",
-            "Dacia",
-            "Lancia",
-            "Lada",
-            "Mitsubishi",
-            "Mazda",
-            "Kia",
-            "Hyundai",
-            "Nissan",
-            "Honda",
-            "Isuzu",
-            "Mercedes-Benz",
-            "Bugatti",
-            "Saab",
-            "Volvo",
-            "Daihatsu",
-            "Jeep",
-            "Cadillac",
-            "Hummer",
-            "Range Rover",
-            "Land Rover",
-            "Mini",
-            "Dodge",
-            "Chervolet",
-            "Corvette",
-            "Jaguar",
-            "Aston Martin",
-            "Oldsmobile",
-            "Volkswagen",
-            "Opel",
-            "Toyota",
-            "Subaru",
-            "Brabus",
-            "Alfa Romeo",
-            "Fiat",
-            "Ferrari",
-            "Lamborghini",
-            "McLaren",
-            "Zenvo",
-            "Ariel",
-            "Noble",
-            "Caterham",
-            "Lotus",
-            "Tesla",
-            "Škoda",
-            "Abarth",
-            "Acura",
-            "Arash",
-            "Ascari",
-            "Bentley",
-            "Bowler",
-            "BAC",
-            "Bristol Cars",
-            "Brooke Cars",
-            "Buick",
-            "Caparo",
-            "Chery",
-            "Chrysler",
-            "Datsun",
-            "Donkervoort",
-            "Fisker",
-            "Ginetta",
-            "GMC",
-            "Hennessey",
-            "Holden",
-            "Infinity",
-            "Joss",
-            "Kamaz",
-            "Koenigsegg",
-            "KTM",
-            "Lexus",
-            "Lister",
-            "Lincoln",
-            "Mahindra",
-            "Maserati",
-            "Mastretta",
-            "MG",
-            "Morgan",
-            "Pagani",
-            "Perodua",
-            "Porsche",
-            "Proton",
-            "Radical",
-            "Ram",
-            "Roewe",
-            "Rolls-Royce",
-            "RUF",
-            "Saleen",
-            "Scion",
-            "Seat",
-            "Smart",
-            "SRT",
-            "SsangYong",
-            "Superformance",
-            "Tata",
-            "TVR",
-            "Ultima",
-            "Vauxhall",
-            "Venturi",
-            "Westfield",
-            "Wiesmann"});
-            this.checkedListBox1.Location = new System.Drawing.Point(142, 120);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(133, 214);
-            this.checkedListBox1.TabIndex = 19;
+            this.button4.Click += new System.EventHandler(this.EditReportWindowCancelBtn);
             // 
             // label5
             // 
@@ -337,6 +222,7 @@
             this.button2.Tag = "EditPage";
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.EditReportPageBtn);
             // 
             // RemovePageButton_click
             // 
@@ -361,11 +247,22 @@
             this.RefreshButton.UseVisualStyleBackColor = true;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
+            // browseButton
+            // 
+            this.browseButton.Location = new System.Drawing.Point(62, 123);
+            this.browseButton.Name = "browseButton";
+            this.browseButton.Size = new System.Drawing.Size(75, 23);
+            this.browseButton.TabIndex = 35;
+            this.browseButton.Text = "Browse";
+            this.browseButton.UseVisualStyleBackColor = true;
+            this.browseButton.Click += new System.EventHandler(this.BrowseBtn);
+            // 
             // EditReportWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 401);
+            this.Controls.Add(this.browseButton);
             this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.RemovePageButton_click);
             this.Controls.Add(this.button2);
@@ -381,7 +278,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Name = "EditReportWindow";
@@ -396,7 +292,6 @@
 
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -414,5 +309,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button RemovePageButton_click;
         private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.Button browseButton;
     }
 }

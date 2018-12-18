@@ -56,23 +56,26 @@ namespace Reportinator3000x
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddModuleBtn(object sender, EventArgs e)
         {
             string moduleName = DropdownModules.SelectedItem.ToString();
             List<string> requiredParams = control.GetRequiredParameters(moduleName);
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             int nr = int.Parse(labelPageNrModules.Text);
 
-            foreach(string param in requiredParams) {
+            foreach (string param in requiredParams)
+            {
                 parameters[param] = parameterBacking[param].ToString();
             }
-            try {
+            try
+            {
                 control.AddModule(_ReportName, nr, null, control.GetSerialNr(moduleName), parameters);
             }
-            catch(NullReferenceException n) {
+            catch (NullReferenceException n)
+            {
                 MessageBox.Show("The page must be created before you can add modules.\nPlease click the \"Create\" button on the page window.");
             }
-            
+
         }
     }
 }
