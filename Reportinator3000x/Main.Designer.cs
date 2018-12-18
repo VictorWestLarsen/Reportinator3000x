@@ -71,7 +71,7 @@ namespace Reportinator3000x
             this.EditReportButton_Click.TabIndex = 3;
             this.EditReportButton_Click.Text = "Edit";
             this.EditReportButton_Click.UseVisualStyleBackColor = true;
-            this.EditReportButton_Click.Click += new System.EventHandler(this.button2_Click);
+            this.EditReportButton_Click.Click += new System.EventHandler(this.EditReportBtn);
             // 
             // button3
             // 
@@ -82,7 +82,7 @@ namespace Reportinator3000x
             this.button3.TabIndex = 4;
             this.button3.Text = "Remove";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.ReportRemoveBtn);
             // 
             // ReportList
             // 
@@ -140,6 +140,7 @@ namespace Reportinator3000x
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "MainWindow2";
             this.Text = "Reportinator 3000x";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);

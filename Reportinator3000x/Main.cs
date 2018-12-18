@@ -43,7 +43,7 @@ namespace Reportinator3000x
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ReportRemoveBtn(object sender, EventArgs e)
         {
             string reportName = ReportList.SelectedItems[0].SubItems[0].Text;
             control.RemoveReport(reportName);
@@ -65,16 +65,19 @@ namespace Reportinator3000x
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void EditReportBtn(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 string reportName = ReportList.SelectedItems[0].SubItems[0].Text;
                 EditReportWindow editReport = new EditReportWindow(control, control.GetReportData(reportName));
                 editReport.Show();
-            } catch (ArgumentOutOfRangeException) {
+            }
+            catch (ArgumentOutOfRangeException)
+            {
                 MessageBox.Show("You must choose a report to edit");
             }
-            
+
         }
     }
 }
