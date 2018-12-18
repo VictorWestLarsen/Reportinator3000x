@@ -36,10 +36,10 @@
             this.NameInput = new System.Windows.Forms.TextBox();
             this.IntervalInput = new System.Windows.Forms.TextBox();
             this.EmailInput = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.browseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -123,121 +123,6 @@
             this.EmailInput.TabIndex = 2;
             this.EmailInput.TextChanged += new System.EventHandler(this.EmailInput_TextChanged);
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Ford",
-            "Audi",
-            "BMW",
-            "Renault",
-            "Citroën",
-            "Dacia",
-            "Lancia",
-            "Lada",
-            "Mitsubishi",
-            "Mazda",
-            "Kia",
-            "Hyundai",
-            "Nissan",
-            "Honda",
-            "Isuzu",
-            "Mercedes-Benz",
-            "Bugatti",
-            "Saab",
-            "Volvo",
-            "Daihatsu",
-            "Jeep",
-            "Cadillac",
-            "Hummer",
-            "Range Rover",
-            "Land Rover",
-            "Mini",
-            "Dodge",
-            "Chervolet",
-            "Corvette",
-            "Jaguar",
-            "Aston Martin",
-            "Oldsmobile",
-            "Volkswagen",
-            "Opel",
-            "Toyota",
-            "Subaru",
-            "Brabus",
-            "Alfa Romeo",
-            "Fiat",
-            "Ferrari",
-            "Lamborghini",
-            "McLaren",
-            "Zenvo",
-            "Ariel",
-            "Noble",
-            "Caterham",
-            "Lotus",
-            "Tesla",
-            "Škoda",
-            "Abarth",
-            "Acura",
-            "Arash",
-            "Ascari",
-            "Bentley",
-            "Bowler",
-            "BAC",
-            "Bristol Cars",
-            "Brooke Cars",
-            "Buick",
-            "Caparo",
-            "Chery",
-            "Chrysler",
-            "Datsun",
-            "Donkervoort",
-            "Fisker",
-            "Ginetta",
-            "GMC",
-            "Hennessey",
-            "Holden",
-            "Infinity",
-            "Joss",
-            "Kamaz",
-            "Koenigsegg",
-            "KTM",
-            "Lexus",
-            "Lister",
-            "Lincoln",
-            "Mahindra",
-            "Maserati",
-            "Mastretta",
-            "MG",
-            "Morgan",
-            "Pagani",
-            "Perodua",
-            "Porsche",
-            "Proton",
-            "Radical",
-            "Ram",
-            "Roewe",
-            "Rolls-Royce",
-            "RUF",
-            "Saleen",
-            "Scion",
-            "Seat",
-            "Smart",
-            "SRT",
-            "SsangYong",
-            "Superformance",
-            "Tata",
-            "TVR",
-            "Ultima",
-            "Vauxhall",
-            "Venturi",
-            "Westfield",
-            "Wiesmann"});
-            this.checkedListBox1.Location = new System.Drawing.Point(114, 131);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(133, 184);
-            this.checkedListBox1.TabIndex = 8;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -273,15 +158,25 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.CreateReportBtnClick);
             // 
+            // browseButton
+            // 
+            this.browseButton.Location = new System.Drawing.Point(62, 130);
+            this.browseButton.Name = "browseButton";
+            this.browseButton.Size = new System.Drawing.Size(75, 23);
+            this.browseButton.TabIndex = 17;
+            this.browseButton.Text = "Browse";
+            this.browseButton.UseVisualStyleBackColor = true;
+            this.browseButton.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(429, 401);
+            this.Controls.Add(this.browseButton);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.EmailInput);
             this.Controls.Add(this.IntervalInput);
             this.Controls.Add(this.NameInput);
@@ -309,9 +204,9 @@
         private System.Windows.Forms.TextBox NameInput;
         private System.Windows.Forms.TextBox IntervalInput;
         private System.Windows.Forms.TextBox EmailInput;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button browseButton;
     }
 }

@@ -13,6 +13,7 @@ namespace Reportinator3000x
     public partial class Report : Form
     {
         private Controller Control;
+   
         public Report(Controller control)
         {
             InitializeComponent();
@@ -63,12 +64,12 @@ namespace Reportinator3000x
 
         private void Report_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void EmailInput_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void IntervalInput_TextChanged(object sender, EventArgs e)
@@ -79,6 +80,12 @@ namespace Reportinator3000x
         private void NameInput_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.ShowDialog();
         }
     }
 }
