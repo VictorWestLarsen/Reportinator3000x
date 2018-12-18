@@ -34,19 +34,19 @@ namespace Reportinator3000x
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void PageCreateBtn(object sender, EventArgs e)
         {
             control.AddPage(PageNameInput.Text, ReportName);
             MessageBox.Show("Page added.");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PageAddBtn(object sender, EventArgs e)
         {
             ModulesWindow modulesWindow = new ModulesWindow(control, ReportName, pageNr);
             modulesWindow.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void PageWindowCancelBtn(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -64,6 +64,16 @@ namespace Reportinator3000x
             foreach(ReportLib.Module module in p.GetModules()) {
                 moduleList.Items.Add(new ListViewItem(new[] { module.ToString() }));
             }
+        }
+
+        private void PageRemoveBtn(object sender, EventArgs e)
+        {
+
+        }
+
+        private void moduleList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

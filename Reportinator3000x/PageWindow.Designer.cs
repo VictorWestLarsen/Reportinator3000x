@@ -78,6 +78,7 @@
             this.moduleList.TabIndex = 12;
             this.moduleList.UseCompatibleStateImageBehavior = false;
             this.moduleList.View = System.Windows.Forms.View.Details;
+            this.moduleList.SelectedIndexChanged += new System.EventHandler(this.moduleList_SelectedIndexChanged);
             // 
             // ModuleName
             // 
@@ -111,7 +112,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.PageAddBtn);
             // 
             // button3
             // 
@@ -123,6 +124,7 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "Remove";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.PageRemoveBtn);
             // 
             // button4
             // 
@@ -133,7 +135,7 @@
             this.button4.TabIndex = 17;
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.PageWindowCancelBtn);
             // 
             // PageNameInput
             // 
@@ -161,7 +163,7 @@
             this.button5.TabIndex = 20;
             this.button5.Text = "Create";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.PageCreateBtn);
             // 
             // NameLabel
             // 
