@@ -68,5 +68,9 @@ namespace Reportinator3000x
         {
             loadPageList();
         }
+
+        private void RemovePageButton_click_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

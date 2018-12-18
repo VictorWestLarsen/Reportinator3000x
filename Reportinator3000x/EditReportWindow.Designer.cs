@@ -328,6 +328,7 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(573, 146);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
@@ -339,6 +340,7 @@
             // 
             // RemovePageButton_click
             // 
+            this.RemovePageButton_click.Enabled = false;
             this.RemovePageButton_click.Location = new System.Drawing.Point(573, 169);
             this.RemovePageButton_click.Margin = new System.Windows.Forms.Padding(2);
             this.RemovePageButton_click.Name = "RemovePageButton_click";
@@ -347,6 +349,7 @@
             this.RemovePageButton_click.Tag = "RemovePage";
             this.RemovePageButton_click.Text = "Remove";
             this.RemovePageButton_click.UseVisualStyleBackColor = true;
+            this.RemovePageButton_click.Click += new System.EventHandler(this.RemovePageButton_click_Click);
             // 
             // RefreshButton
             // 

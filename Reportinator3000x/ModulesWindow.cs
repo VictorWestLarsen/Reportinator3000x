@@ -66,8 +66,13 @@ namespace Reportinator3000x
             foreach(string param in requiredParams) {
                 parameters[param] = parameterBacking[param].ToString();
             }
-
-            control.AddModule(_ReportName, nr, null, control.GetSerialNr(moduleName), parameters);
+            try {
+                control.AddModule(_ReportName, nr, null, control.GetSerialNr(moduleName), parameters);
+            }
+            catch(NullReferenceException n) {
+                MessageBox.Show("The page must be created before you can add modules.\nPlease click the \"Create\" button on the page window.");
+            }
+            
         }
     }
 }
