@@ -166,7 +166,7 @@
             this.browseButton.TabIndex = 17;
             this.browseButton.Text = "Browse";
             this.browseButton.UseVisualStyleBackColor = true;
-            this.browseButton.Click += new System.EventHandler(this.button1_Click);
+            this.browseButton.Click += new System.EventHandler(this.BrowseBtn);
             // 
             // Report
             // 

@@ -62,6 +62,7 @@ namespace Reportinator3000x
         }
 
 
+
         private void Report_Load(object sender, EventArgs e)
         {
            
@@ -82,10 +83,12 @@ namespace Reportinator3000x
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void BrowseBtn(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.ShowDialog();
         }
     }
+
 }
